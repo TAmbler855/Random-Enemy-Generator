@@ -1,25 +1,29 @@
 //created by Treyven Ambler
 
 function findForestEnemy(){//Forest enemies
-    var easyForestEnemies = ['e1', 'e2', 'e3', 'e4', 'e5'];
-    var mediumForestEnemies = ['m1', 'm2', 'm3', 'm4', 'm5'];
-    var hardForestEnemies = ['h1', 'h2', 'h3', 'h4', 'h5'];
-    var extremeForestEnemies = ['ex1', 'ex2', 'ex3', 'ex4', 'ex5'];
+    var rank1ForestEnemies = ['Fox Hawk', 'Secretive Hunter', 'Tree Wraith'];
+    var rank2ForestEnemies = ['Rotten Wanderer', 'Shambler', 'Troll', 'Saber Tooth'];
+    var rank3ForestEnemies = ['Tree Monk', 'Tree King', 'Paladin of the Trees', 'Surprise Tree', 'Oaken Berserker'];
+    var rank4ForestEnemies = ['Nymph', 'Tree Berserker', 'Oaken Hound', 'Nargacuga', 'Beholder Scout'];
+    var rank5ForestEnemies = ['Tree Giant', 'Wolf of the Mist'];
     //enemy categories
     var difficulty = document.getElementById('diff').value;
     var randomForestEnemy;
     
     if(difficulty <= 3){//picks a random easy enemy if difficulty value is 3 or less
-        randomForestEnemy = easyForestEnemies[Math.floor(Math.random() * easyForestEnemies.length)];
+        randomForestEnemy = rank1ForestEnemies[Math.floor(Math.random() * rank1ForestEnemies.length)];
     }
-    else if(difficulty > 3 && difficulty <= 6){//picks a random medium enemy if difficulty value is between 4 and 6.
-        randomForestEnemy = mediumForestEnemies[Math.floor(Math.random() * mediumForestEnemies.length)];
+    else if(difficulty > 3 && difficulty <= 5){//picks a random medium enemy if difficulty value is between 4 and 6.
+        randomForestEnemy = rank2ForestEnemies[Math.floor(Math.random() * rank2ForestEnemies.length)];
     }
-    else if(difficulty > 6 && difficulty <= 9){//picks random hard enemy if difficulty value is between 7 and 9.
-        randomForestEnemy = hardForestEnemies[Math.floor(Math.random() * hardForestEnemies.length)];
+    else if(difficulty > 5 && difficulty <= 7){//picks random hard enemy if difficulty value is between 7 and 9.
+        randomForestEnemy = rank3ForestEnemies[Math.floor(Math.random() * rank3ForestEnemies.length)];
+    }
+    else if(difficulty > 7 && difficulty <= 9){
+        randomForestEnemy = rank4ForestEnemies[Math.floor(Math.random() * rank4ForestEnemies.length)];
     }
     else if(difficulty = 10){//picks random extreme enemy if difficulty value is 10.
-        randomForestEnemy = extremeForestEnemies[Math.floor(Math.random() * extremeForestEnemies.length)];
+        randomForestEnemy = rank5ForestEnemies[Math.floor(Math.random() * rank5ForestEnemies.length)];
     }
     else{
         window.alert('The difficulty value must be between 1 and 10');
