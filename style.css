@@ -1,3 +1,32 @@
+html{
+    background-color: darkgray;
+}
+
+body{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+}
+
+header h1{
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+p{
+    margin-left: 5%;
+}
+
+div#input{
+    margin-left: 25%;
+}
+
+footer::after{
+    display: table;
+    content: '';
+}
+
 input#diff{
-    width: 7%;
+    width: 10%;
 }

@@ -8,16 +8,31 @@
     <title>Random enemy locator</title>
 </head>
 <body>
-    
-    <input type="number" id="diff" placeholder="Difficulty" min="1" max="10">
-    <!-- difficulty slider -->
 
-    <button id="enemies">Enemies</button>
-    <!-- enemy button -->
+    <header>
+        <h1>Random Enemy Generator</h1>
+    </header>
+    
     <div>
-        <p id="foundEnemy"></p>
+        <p>Input a difficulty value from 1 to 10 into the box below, then click an area button to generate a random enemy from that area.</p>
     </div>
-    <!-- placeholder text for js file -->
+
+    <div id="input">
+        <input type="number" id="diff" placeholder="Difficulty" min="1" max="10">
+        <!-- difficulty slider -->
+
+        <button id="forestEnemies">The Forest</button>
+        <button id="labyrinthEnemies">The Labyrinth</button>
+        <button id="arenaEnemies">The Arena</button>
+        <button id="badlandsEnemies">The Badlands</button>
+        <!-- enemy buttons -->
+    </div>
+    <footer>
+        <div>
+            <p id="foundEnemy"></p>
+        </div>
+        <!-- placeholder text for js file -->
+    </footer>
     <script src="enemyFinder.js"></script>
 </body>
 </html>
